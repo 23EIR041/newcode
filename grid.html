@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Layout</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 150px 1fr 1fr;
+      gap: 4px;
+      width: 700px;
+      height: 800px;
+      border: 4px solid black;
+      margin: 30px auto;
+    }
+
+    .grid-item {
+      border: 2px solid black;
+      padding: 20px;
+      font-size: 22px;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .item1 {
+      grid-column: 1;
+      grid-row: 1;
+      padding: 0;
+    }
+
+    .item1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .item2 { grid-column: 2; grid-row: 1; }
+    .item3 { grid-column: 1; grid-row: 2 / 4; }
+    .item4 { grid-column: 2; grid-row: 2; }
+    .item5 { grid-column: 2; grid-row: 3; }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item item1">
+    <img src="jurassicmovie.png" alt="Movie Poster">
+  </div>
+  <div class="grid-item item2">🎬 Title: Jurassic World Rebirth</div>
+  <div class="grid-item item3"><p>
+    <b>👥 Caste:</b><br> Scarlett Johansson plays Zora Bennett 
+    👥Jonathan Bailey portrays Dr. Henry Loomis<br>
+    👥Mahershala Ali plays Duncan Kincaid<br>
+    👥Rupert Friend is cast as Martin Krebs<br>
+    👥Manuel Garcia-Rulfo appears as Reuben Delgado</p></div>
+  <div class="grid-item item4">🎬 Director: Gareth Edwards</div>
+  <div class="grid-item item5">📖 Summary: In Jurassic World: Rebirth, dinosaurs now roam freely across the globe. Amid global chaos, a secretive biotech firm, NovaGen, launches a new project on Isla Sombra. Genetic manipulation escalates, creating smarter, deadlier hybrids. Former heroes reunite to stop a new extinction-level threat and decide the fate of both humans and dinosaurs.</div>
+</div>
+
+</body>
+</html>
